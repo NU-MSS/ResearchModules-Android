@@ -1,45 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
+        <option name="testRunner" value="PLATFORM" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/common" />
+            <option value="$PROJECT_DIR$/flanker" />
+            <option value="$PROJECT_DIR$/flanker-test-app" />
             <option value="$PROJECT_DIR$/motor-control" />
             <option value="$PROJECT_DIR$/motor-control-test-app" />
+            <option value="$PROJECT_DIR$/mss-mobile-toolkit" />
             <option value="$PROJECT_DIR$/psorcast" />
             <option value="$PROJECT_DIR$/psorcast-test-app" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
-        <option name="testRunner" value="PLATFORM" />
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <compositeConfiguration>
-          <compositeBuild compositeDefinitionSource="IDE">
-            <builds>
-              <build path="$PROJECT_DIR$" name="MotorControl-Android" />
-            </builds>
-          </compositeBuild>
-        </compositeConfiguration>
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/../SageResearch-Android" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$/../SageResearch-Android" />
-            <option value="$PROJECT_DIR$/../SageResearch-Android/app" />
-            <option value="$PROJECT_DIR$/../SageResearch-Android/data" />
-            <option value="$PROJECT_DIR$/../SageResearch-Android/domain" />
-            <option value="$PROJECT_DIR$/../SageResearch-Android/mobile-ui" />
-            <option value="$PROJECT_DIR$/../SageResearch-Android/presentation" />
-          </set>
-        </option>
-        <option name="resolveModulePerSourceSet" value="false" />
-        <option name="testRunner" value="PLATFORM" />
+        <option name="useQualifiedModuleNames" value="true" />
       </GradleProjectSettings>
     </option>
   </component>

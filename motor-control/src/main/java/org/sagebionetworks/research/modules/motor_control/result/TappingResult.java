@@ -1,6 +1,7 @@
 package org.sagebionetworks.research.modules.motor_control.result;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.annotation.Size;
 
 import com.google.auto.value.AutoValue;
@@ -9,13 +10,15 @@ import com.google.gson.Gson;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.SerializedName;
 
+import org.sagebionetworks.research.domain.result.AnswerResultType;
+import org.sagebionetworks.research.domain.result.interfaces.AnswerResult;
 import org.sagebionetworks.research.domain.result.interfaces.Result;
 import org.sagebionetworks.research.modules.motor_control.show_step_fragment.tapping.TappingSample;
 import org.threeten.bp.Instant;
 import org.threeten.bp.ZonedDateTime;
 
 @AutoValue
-public abstract class TappingResult implements Result {
+public abstract class TappingResult implements AnswerResult<Integer> {
     @AutoValue.Builder
     public abstract static class Builder {
         public abstract TappingResult build();
@@ -69,9 +72,21 @@ public abstract class TappingResult implements Result {
     @Size(4)
     public abstract int[] getButtonBoundRight();
 
+    @Nullable
+    @Override
+    public Integer getAnswer() {
+        return getHitButtonCount();
+    }
+
     @Override
     @NonNull
     public abstract Instant getEndTime();
+
+    @NonNull
+    @Override
+    public String getAnswerResultType() {
+        return AnswerResultType.INTEGER;
+    }
 
     @Override
     @NonNull
